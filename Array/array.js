@@ -14,34 +14,33 @@ let x = Number(nextLine());
 
 while(true) {
 
-// y is string input
+// y is string(name) input
   y  = (nextLine());
+// TotalNames is loop for nextLine() input
 
   totalNames++;
-  let count = (x + 1)
-  //check that string(name) inputs = N and then end
-  //Check that string(name) inputs are < = 100
-  if (totalNames >= count || totalNames >= 101) {
+ 
+//add inputs into array called "names" 
+  
+  names.push(y)
+
+//constraints  
+  if (names.length == x || names.length > 100) {
     
     break;
   }
-  
-//check that N is <= 1
-  if (x <= 1) {
-    continue; 
-  }
-  names.push(y)
-  }
+}
 
-//Reverse interation on array   
+//Check that the total of string //(name) inputs equal first //input (Number)
+
+//console.log(totalNames)
+
+//Reverse iteration to display last name first 
 for(i = names.length -1; i>=0;i--)
   {
+  
+//display index and names in reverse order
    console.log([i] + " " +names[i])
   }
-
-
-
-
-
 
 
